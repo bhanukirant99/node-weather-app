@@ -1,1 +1,1 @@
-# node-weather-app
+# weather-app-server
