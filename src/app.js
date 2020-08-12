@@ -62,11 +62,6 @@ app.get('/weather', (req, res) => {
                     });
                 });
             });
-            console.log(req.query)
-            // res.send({
-            //     place_name: "Whoopie, вул. Пушкінська, 31, Одеса, Odessa, Ukraine",
-            //     forecast: "Its' raining"
-            // });
         }
 });
 
