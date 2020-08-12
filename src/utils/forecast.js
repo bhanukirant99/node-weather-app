@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback('Place not found', undefined);
         } else {
-            callback(undefined, "It is currently " + body.data[0].temp + " degrees out. There is a " + body.data[0].precip + "% chance of rain.");
+            callback(undefined, body.data[0].weather.description + ". It is currently " + body.data[0].temp + " degrees out. Realtive Humidity is " + body.data[0].rh + ". There is a " + body.data[0].precip + "% chance of rain.");
         }
     });
 }

@@ -5,10 +5,8 @@ const geocode = (address, callback) => {
     request({ url, json: true }, (error, {body}) => {
         if (error) {
             callback('Unable to get response from location api', undefined);
-            console.log('Unable to get response from location api');
         } else if (body.message || body.features.length === 0) {
             callback('Unable to locate the Place, try another', undefined);
-            console.log('Unable to locate the Place, try another');
         } else {
             callback(undefined, {
                 latitude: body.features[0].geometry.coordinates[1],

@@ -13,11 +13,8 @@ weatherForm.addEventListener('submit', (e) => {
     fetch('/weather?address=' + searchLocation).then((response) => {
         response.json().then((data) => {
             if(data.error) {
-                console.log(data.error);
                 messageOne.textContent = data.error;
             } else {
-                console.log(data.location);
-                console.log(data.forecast);
                 messageOne.textContent = 'Location: ' + data.location;
                 messageTwo.textContent = 'Forecast: ' + data.forecast;
             }
